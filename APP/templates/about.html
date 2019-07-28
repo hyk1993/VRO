@@ -1,0 +1,90 @@
+<style>
+    .fixedpart {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+       
+    }
+    .slideshow_slides {
+        background-color: pink;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .slideshow_slides a {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    } 
+    .slideshow_nav a.prev {
+        background-color: skyblue;
+        position: fixed;
+        top: 330px;
+        left: 100px;
+    }
+    .slideshow_nav a.next {
+        background-color: skyblue;
+        position: fixed;
+        top: 330px;
+        right: 100px;
+    }
+    .indicator {
+        background-color: skyblue;
+        width: 60px;
+        height: 20px;
+        position: fixed;
+        bottom: 60px;
+        left: 48%;
+        text-align:center;
+    }
+
+</style>
+
+<div id='Fixed_container' class='fixedpart'>   
+    <div class="slideshow_slides">
+        <a href=""><img src="https://i.pinimg.com/564x/65/ee/0e/65ee0ee9758e77fa2f3a2fedde7157d7.jpg" alt="slide1"/></a>
+        <a href=""><img src="https://i.pinimg.com/564x/e2/c5/1f/e2c51f563137b6b52ba7f759d6e21983.jpg" alt="slide2"/></a>
+        <a href=""><img src="https://i.pinimg.com/564x/7e/6b/f2/7e6bf2bde387c175d7a3b6594bbb168f.jpg" alt="slide3"/></a>
+        <a href=""><img src="https://i.pinimg.com/564x/61/08/8e/61088e2409f111fabdaf20ab2a5f5888.jpg" alt="slide4"/></a>
+    </div>
+    <div class="slideshow_nav">
+        <a href="" class="prev">prev</a>
+        <a href="" class="next">next </a>
+    </div>
+    <div class="indicator">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+    </div> 
+</div>
+
+<script>
+    $(function() {
+    var container = $('.slideshow'),
+        slideGroup = container.find('.slideshow_slides'),
+        slides = slideGroup.find('a'),
+        nav = container.find('.slideshow_nav'),
+        indicator = container.find('.indicator'),
+        slideCount = slides.length,
+        indicatorHtml = '',
+        currentIndex = 0,
+        duration = 500,
+        easing = 'easeInOutExpo',
+        interval = 35 00,
+        timer; 
+        console.log(slides);
+        slides.each(function(i){
+            var newLeft = i * 100 + '%';
+            $(this).css({left: newLeft });
+            indicatorHtml = '<a href="">' + (i+1) + '</a>';
+            console.log(indicatorHtml);
+        });
+        indicator.html(indicatorHtml);
+
+    });
+
+
+
+    
+</script>

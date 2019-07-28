@@ -1,0 +1,203 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    input[id="menuicon"]:checked+label span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    input[id="menuicon"]:checked+label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    input[id="menuicon"]:checked+label span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    input[id="menuicon"]+label {
+        display: block;
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
+        position: relative;
+        margin-left: -70px;
+        z-index: 100;
+    }
+
+    input[id="menuicon"]+label span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        border-radius: 30px;
+        background: white;
+        transition: all .35s;
+    }
+
+    input[id="menuicon"]+label span:nth-child(1) {
+        top: 0;
+    }
+
+    input[id="menuicon"]+label span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input[id="menuicon"]+label span:nth-child(3) {
+        bottom: 0;
+    }
+
+    .bg {
+        position: fixed;
+        margin-top: 0px;
+        left: 0px;
+        top: 0px;
+        padding-top: 0px !important;
+        z-index: 10;
+    }
+
+    .fixedpart {
+        position: fixed;
+        height: 500px;
+        width: 100%;
+    }
+
+    .fixedpart p {
+        margin-top: 320px;
+        margin-left: 455px;
+        font-size: 50px;
+    }
+
+    .slidepart {
+        height: 2000px;
+        width: 80%;
+        max-width: 100%;
+        position: absolute;
+        background-color: white;
+        top: 775px;
+        margin-left: 320px;
+        z-index: 0;
+    }
+
+    .slidepart h1 {
+        color: black;
+        margin-top: 300px;
+        margin-left: 500px;
+        z-index: 1;
+    }
+
+    .navbar-expand-lg {
+        background: black !important;
+        width: 100%;
+        height: 85px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .topdiv {
+        width: 100%;
+        padding-top: 690px;
+        z-index: 30;
+
+    }
+
+    .sidemenu {
+        height: 680px;
+        width: 320px;
+        background-color: grey;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Get Rare and Be Rare">
+    <meta name="Keywords" content="빈티지, 중고의류, 중고, 구제, 광장시장, VRO, vro, 브로">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="홍용기, 장재석, 윤영재">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <title>VRO : Very Rare Only</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id='Fixed_container' class='fixedpart'>
+        <p>MAIN 고정이미지</p>
+    </div>
+    <div id="stickytop" class="topdiv">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#" style="font-size:45px;">VRO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mypage</a>
+                    </li>
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Join Us</a>
+                </li>
+ 
+                </ul>
+            </div>
+        </nav>
+        <div class="sidemenu"></div>
+    </div>
+    <div id='top_container' class='slidepart'>
+        <div>
+            <h1>MAIN 슬라이드 부분</h1>
+        </div>
+    </div>
+    <script>
+        //navbar 상단 고정 용 javascript
+        var Fixed_container = $("#Fixed_container");
+        console.log(Fixed_container.outerHeight(true));
+        $(window).on("scroll", function stopthenavbar() {
+            if ($(window).scrollTop() > Fixed_container.outerHeight(true) + 120) {
+                console.log($(window).scrollTop());
+                console.log(Fixed_container.outerHeight(true));
+                $("#stickytop").addClass("bg");
+
+            } else {
+                $("#stickytop").removeClass("bg");
+
+            }
+        });
+    </script>
+</body>
+
+</html>
